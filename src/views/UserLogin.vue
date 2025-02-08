@@ -57,5 +57,5 @@ const handleLogin = async () => {
 </script>
 
 <style lang="scss" scoped>
-@import url("@/styles/pages/_login.scss");
+@import "@/styles/pages/_login.scss";
 </style>

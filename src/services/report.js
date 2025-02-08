@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import fetchAPI from "./api";
-const baseURL = process.env.VUE_APP_URL || "http://127.0.0.1:8080";
+const baseURL =
+  process.env.VUE_APP_URL ||
+  "https://heabys.github.io/prueba-tecnica-tk-front-static";
 
 export const reportService = {
   async getReports() {

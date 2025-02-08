@@ -1,6 +1,6 @@
 <template>
     <div class="header-container">
-        <img src="../assets/logo.png" alt="logo">
+        <img src="/prueba-tecnica-tk-front-static/logo.png" alt="logo">
 
     </div>
     <div class="report-container">
@@ -25,7 +25,7 @@
                             <button class="btn-download" @click="downloadReport(report)">
                                 <span>Descargar</span>
                                 <div class="download-icon">
-                                    <img src="../assets/download_vector.png" alt="descargar">
+                                    <img src="/prueba-tecnica-tk-front-static/download_vector.png" alt="descargar">
                                 </div>
                             </button>
                         </td>
@@ -48,8 +48,7 @@
 import { ref, onMounted } from 'vue'
 import ReportFormModal from '../components/ReportFormModal.vue'
 import { reportService } from '../services/report'
-// eslint-disable-next-line no-unused-vars
-import echo from '@/utils/echo'
+
 
 const showModal = ref(false)
 const reports = ref([])
@@ -111,6 +110,6 @@ const submitReport = async (report) => {
 </script>
 
 <style lang="scss" scoped>
-@import url("@/styles/pages/_report.scss");
-@import url("@/styles/components/_modals.scss");
+@import "@/styles/pages/_report.scss";
+@import "@/styles/components/_modals.scss";
 </style>
