@@ -1,0 +1,93 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../fonts";
+
+.btn-container {
+  margin: 24px 0;
+}
+
+.btn {
+  //   -webkit-appearance: none;
+  border: 1px solid $button-background-color;
+  box-sizing: border-box;
+  color: #606266;
+  width: 227px;
+  height: 51px;
+  padding: 16px 50px 16px 50px;
+  gap: 10px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  transition: 0.1s;
+  white-space: nowrap;
+  background-color: $button-background-color;
+  border-radius: 50px;
+  box-shadow: none;
+
+  &:disabled {
+    background: #cfcfcf;
+    width: 227px;
+    height: 51px;
+    padding: 16px 50px 16px 50px;
+    gap: 10px;
+    border-radius: 50px;
+    border-color: #cfcfcf;
+    opacity: 0px;
+  }
+
+  span {
+    align-items: center;
+    color: #181818;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    justify-content: center;
+    line-height: 18px;
+  }
+}
+
+.btn-download {
+  width: 108px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: none;
+  gap: 5px;
+  margin-left: auto;
+
+  span {
+    width: 83px;
+    height: 24px;
+    font-family: Argentum Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+
+  .download-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+}

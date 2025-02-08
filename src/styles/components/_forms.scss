@@ -1,0 +1,105 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+@use "../fonts";
+
+label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 12px;
+  font-weight: 300;
+  color: dimgray;
+  background: transparent;
+  line-height: 16px;
+  width: 100%;
+  text-align: left;
+  white-space: nowrap;
+  pointer-events: none;
+  display: flex;
+  z-index: 3;
+
+  &::before,
+  &::after {
+    margin-top: 6px;
+    border-top: 1px solid $border-color;
+    content: "" !important;
+    display: inline-block;
+    height: 18px;
+  }
+
+  &::before {
+    border-left: 1px solid $border-color;
+    border-radius: 6px 0;
+    margin-right: 4px;
+    width: 12px;
+  }
+
+  &::after {
+    border-radius: 0 6px;
+    border-right: 1px solid $border-color;
+    margin-left: 4px;
+    flex-grow: 1;
+  }
+
+  &::empty {
+    margin-left: 0;
+    width: 0;
+  }
+}
+
+.item-form {
+  display: inline-block;
+  overflow: hidden;
+  padding-top: 23px;
+  position: relative;
+  width: 100%;
+  margin-bottom: 8px !important;
+}
+
+.input-container {
+  line-height: normal;
+  margin-left: 0 !important;
+  min-height: 36px;
+
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+}
+
+.input-container-inner {
+  display: inline-block;
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+  border-radius: 4px;
+  background-color: transparent;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-color: $border-color;
+  border: 1px solid #c0c4cc;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  color: #565656;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  height: 36px;
+  line-height: 18px;
+  outline: 0;
+  padding: 0 15px 16px 15px;
+  text-align: left;
+  transition: border 0.2s, color 0.2s;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
